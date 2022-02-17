@@ -1,0 +1,9 @@
+# Increase volume
+"volume up"
+   XF86AudioRaiseVolume
+# Decrease volume
+"volume down"
+   XF86AudioLowerVolume
+# Mute volume
+"volume mute"
+   XF86AudioMute

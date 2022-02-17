@@ -1,0 +1,31 @@
+#!/bin/bash
+
+# You can call this script like this:
+# $./volume.sh up
+# $./volume.sh down
+# $./volume.sh mute
+
+case $1 in
+    up)
+	pamixer -u
+	pamixer -i 5
+	volume=$(pamixer --get-volume)
+	dunstify -r 1834 -h string:hlcolor:#acb0d0 -h int:value:"$volume" -i "volume-$1" " ${volume}%" -t 2000
+	;;
+    down)
+	pamixer -u
+	pamixer -d 5
+	volume=$(pamixer --get-volume)
+	dunstify -r 1834 -h string:hlcolor:#acb0d0 -h int:value:"$volume" -i "volume-$1" " ${volume}%" -t 2000
+	;;
+    mute)
+	pamixer -t
+	if $(pamixer --get-mute); then
+		volume=$(pamixer --get-volume)
+		dunstify -r 1834 -h string:hlcolor:#444b6a -h int:value:"$volume" -i "volume-$1" "婢" -t 2000
+	else
+		volume=$(pamixer --get-volume)
+		dunstify -r 1834 -h string:hlcolor:#acb0d0 -h int:value:"$volume" -i "volume-$1" " ${volume}%" -t 2000
+	fi
+	;;
+esac

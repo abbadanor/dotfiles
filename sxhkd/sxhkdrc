@@ -1,0 +1,136 @@
+
+# wm independent hotkeys
+#
+
+# program launcher
+super + space
+	rofi -show drun	
+
+# program launcher
+super + shift + @space
+	rofi -show run	
+
+# reload sxhkd
+super + shift + r
+	pkill -USR1 -x sxhkd
+
+# lock screen
+super + Escape 
+	betterlockscreen -l iceland
+
+# emoji menu
+super + e
+	rofi -show emoji
+
+#
+# programs
+#
+
+
+# terminal emulator
+super + Return
+	st -e fish
+
+# terminal emulator (bash)
+super + shift + Return
+	st
+
+# music
+super + m
+	st -- ncmpcpp
+
+# chromium
+super + b
+	chromium
+
+#
+# bspwm hotkeys
+#
+
+# quit bspwm
+super + alt + e
+  bspc quit
+
+# reload bspwm
+super + alt + r
+  bspc wm -r
+
+# close
+super + w
+	bspc node -c
+
+# swap the current node and the biggest window
+super + g
+	bspc node -s biggest.window
+
+#
+# state/flags
+#
+
+# set the window state
+super + {t,shift + f}
+	bspc node -t {tiled,floating}
+
+toggle fullscreen
+super + f
+  bspc node -t ~fullscreen
+
+# set the node flags
+super + ctrl + {m,x,y,z}
+	bspc node -g {marked,locked,sticky,private}
+
+#
+# focus/swap
+#
+
+# focus the node in the given direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# close and kill
+super + {_,shift + }w
+	bspc node -{c,k}
+
+# focus the node for the given path jump
+#super + {p,b,comma,period}
+#	bspc node -f @{parent,brother,first,second}
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local
+
+# cycle though windows
+super + Tab
+  bspc node -f next.local.!hidden.window
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9,0}
+	bspc {desktop -f,node -d} '^{1-9,10}'
+
+#
+# preselect
+#
+
+# preselect the direction
+super + ctrl + {h,j,k,l}
+	bspc node -p {west,south,north,east}
+
+# preselect the ratio
+super + ctrl + {1-9}
+	bspc node -o 0.{1-9}
+
+# cancel the preselection for the focused desktop
+super + ctrl + space
+	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+#
+# move/resize
+#
+
+super + r : {h,j,k,l,shift+h,shift+j,shift+k,shift+l}
+	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0,right -20 0,top 0 20,bottom 0 -20,left 20 0}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+
