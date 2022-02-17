@@ -1,3 +1,2 @@
 #! /bin/sh
-
-pandoc $1 -f markdown -t pdf | zathura -
+pandoc $1 -f markdown -t pdf | zathura - 

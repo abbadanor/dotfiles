@@ -22,6 +22,14 @@ super + Escape
 super + e
 	rofi -show emoji
 
+# screenshot monitor
+super + p
+  screenshot
+
+# screenshot focused window
+super + shift + p
+  screenshot window
+
 #
 # programs
 #
@@ -37,7 +45,7 @@ super + shift + Return
 
 # music
 super + m
-	st -- ncmpcpp
+  st -n music -g "=160X50" -- ncmpcpp
 
 # chromium
 super + b

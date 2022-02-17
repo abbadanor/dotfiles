@@ -13,6 +13,7 @@ bspc config gapless_monocle       true
 bspc config single_monocle        true
 
 bspc rule -a Zathura state=tiled
+bspc rule -a St:music state=floating
 
 # autostart
 picom --experimental-backends &

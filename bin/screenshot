@@ -1,5 +1,5 @@
 #!/bin/sh
-output="/home/fladam/pictures/screenshots/%Y-%m-%d-%T-screenshot.png"
+output="/home/fladam/pictures/screencaps/%Y-%m-%d-%T-screenshot.png"
 
 case  "$1" in
 	"window") scrot "$output" --focused --border || exit ;;
