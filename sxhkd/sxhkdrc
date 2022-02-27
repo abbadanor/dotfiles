@@ -12,7 +12,7 @@ super + shift + @space
 
 # reload sxhkd
 super + shift + r
-	pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd;dunstify "Reloaded sxhkd"
 
 # lock screen
 super + Escape 
@@ -50,6 +50,10 @@ super + m
 # chromium
 super + b
 	chromium
+
+# kill chromium
+super + shift + b
+  killall chromium;dunstify "Killed chromium"
 
 #
 # bspwm hotkeys

@@ -16,7 +16,7 @@ shade-4 = #CACACE
 shade-5 = #acb0d0
 
 [bar/main]
-monitor = DP-3
+monitor = DisplayPort-2
 width = 100%
 height = 30
 offset-y = 0
