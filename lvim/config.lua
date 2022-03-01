@@ -82,6 +82,7 @@ lvim.builtin.treesitter.highlight.enabled = true
 
 require("lvim.lsp.manager").setup("tailwindcss")
 require("lvim.lsp.manager").setup("volar")
+vim.list_extend(lvim.lsp.override, { "vuels" })
 
 -- generic LSP settings
 

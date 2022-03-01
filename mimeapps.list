@@ -1,0 +1,20 @@
+[Default Applications]
+
+# xdg-open will use these settings to determine how to open filetypes.
+# These .desktop entries can also be seen and changed in ~/.local/share/applications/
+
+text/x-shellscript=text.desktop;
+text/plain=text.desktop;
+application/postscript=pdf.desktop;
+application/pdf=pdf.desktop;
+image/png=img.desktop;
+image/jpeg=img.desktop;
+image/webp=img.desktop;
+image/gif=img.desktop;
+video/x-matroska=video.desktop
+audio/mpeg=video.desktop
+audio/x-hx-aac-adts=video.desktop
+inode/directory=file.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-Telegram Desktop-US2IG1.desktop;

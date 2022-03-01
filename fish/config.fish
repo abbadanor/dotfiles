@@ -29,6 +29,7 @@ alias remote="ssh root@fladam.org"
 alias feh="feh --scale-down"
 alias calc="qalc"
 alias lf="lfrun"
+alias r="trash-put"
 
 abbr yta "yt-dlp -x -f bestaudio/best"
 abbr ka killall
