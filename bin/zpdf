@@ -1,2 +1,3 @@
 #! /bin/sh
-pandoc $1 -f markdown -t pdf | zathura - 
+#pandoc $1 -f markdown -t pdf | zathura - 
+cat ~/.config/md-to-pdf/front-matter $1 | md-to-pdf | zathura -
