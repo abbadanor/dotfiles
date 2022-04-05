@@ -22,6 +22,9 @@ super + Escape
 super + e
 	rofi -show emoji
 
+super + n
+  nautilus
+
 # screenshot monitor
 super + p
   screenshot
@@ -46,6 +49,9 @@ super + shift + Return
 # music
 super + m
   st -t music -g "=160X50" -- ncmpcpp
+
+# super + m
+#   st -t music -g "=250X100" -- tmux new-session -s $$ "tmux source-file ~/.ncmpcpp/tsession"
 
 # chromium
 super + b
