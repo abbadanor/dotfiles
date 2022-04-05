@@ -49,7 +49,7 @@ font-5 = "Source Han Sans CN:size=9;2"
 
 modules-left = date
 modules-center = bspwm
-modules-right = wlan pulseaudio margin session
+modules-right = mpd wlan pulseaudio margin session
 
 cursor-click = pointer
 
@@ -60,6 +60,16 @@ inherit = bar/main
 
 [settings]
 screenchange-reload = true
+
+[module/mpd]
+type = internal/mpd
+host = 0.0.0.0
+port = 6600
+interval = 1
+format-online = <label-time> <icon-stop> <label-song>
+icon-stop = "  "
+format-offline = 
+label-song = %artist% - %title%
 
 [module/battery]
 type = internal/battery
@@ -122,19 +132,12 @@ content-foreground = ${colors.trans}
 
 [module/pulseaudio]
 type = internal/pulseaudio
-format-volume = <label-volume> <bar-volume>
-label-volume = "墳"
-format-muted = <label-muted> <bar-volume>
-label-muted-foreground = ${colors.fg}
-label-muted = "ﱝ"
+format-volume = <label-volume>
+format-muted = <label-muted>
+label-volume = "墳 %percentage%% "
+label-muted-foreground = ${colors.fg-alt}
+label-muted = "ﱝ %percentage%% "
 click-right = pavucontrol&
-
-bar-volume-width = 10
-bar-volume-fill-foreground = ${colors.fg}
-bar-volume-indicator = 
-bar-volume-fill = - 
-bar-volume-empty = -
-bar-volume-empty-foreground = #565c64
 
 [module/session]
 type = custom/text

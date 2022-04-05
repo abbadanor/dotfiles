@@ -27,9 +27,9 @@ alias yt="yt-dlp --add-metadata -i"
 alias ffmpeg="ffmpeg -hide_banner"
 alias remote="ssh root@fladam.org"
 alias feh="feh --scale-down"
-alias calc="qalc"
 alias lf="lfrun"
 alias r="trash-put"
+alias calc="qalc"
 
 abbr yta "yt-dlp -x -f bestaudio/best"
 abbr ka killall
@@ -43,7 +43,7 @@ abbr cls clear
 abbr z zathura
 
 alias cfx "$EDITOR $HOME/.xinitrc"	# Colors, themes and variables for X11
-alias cfp "$EDITOR $HOME/.bash_profile"	# profile file for login settings for zsh
+alias cfp "$EDITOR $HOME/.profile"	# profile file for login settings for zsh
 alias cfl "$EDITOR $XDG_CONFIG_HOME/lf/lfrc"		# lf (file browser) config
 alias cfw "$EDITOR $XDG_CONFIG_HOME/bspwm/bspwmrc"	# bpswm config
 alias cfs "$EDITOR $XDG_CONFIG_HOME/sxhkd/sxhkdrc"	# simple x hotkey daemon config

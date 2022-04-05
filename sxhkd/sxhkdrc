@@ -41,11 +41,11 @@ super + Return
 
 # terminal emulator (bash)
 super + shift + Return
-	st
+	alacritty
 
 # music
 super + m
-  st -n music -g "=160X50" -- ncmpcpp
+  st -t music -g "=160X50" -- ncmpcpp
 
 # chromium
 super + b
